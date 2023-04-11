@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import SplineLoader from "@splinetool/loader";
 
+      // import splinetoolloader as SplineLoader from "https://cdn.jsdelivr.net/npm/@splinetool/loader@0.9.273/+esm";
+
 window.mobileCheck = function () {
   let check = false;
   (function (a) {
@@ -60,7 +62,11 @@ loader.load(
   "https://prod.spline.design/DLZ8S-ieGXX1xaRa/scene.splinecode",
   (splineScene) => {
     scene.add(splineScene);
-    isLoading.value = false;
+    // isLoading.value = false;
+    const data = {
+      loading:false
+    }
+    parent.postMessage({ type: "onSuccess", data }, "*");
   }
 );
 
@@ -234,16 +240,24 @@ function onClick(event) {
       a.push(intersects[i].object.name);
     }
     if (intersects.length > 1) {
-      if (
-        checkYT(intersects) ||
-        checkSP(intersects) ||
-        checkAZ(intersects) ||
+      const data = {
+        target:''
+      }
+      if (checkYT(intersects)){
+        data.target = 'YT'
+      }else if (checkSP(intersects)) {
+        data.target = "SP";
+      }else if (checkAZ(intersects)) {
+        data.target = "AZ";
+      }else if (
         checkCreator(intersects) ||
         intersects[0].object.name === "Follow me.png"
       ) {
-        // openModal();
-        // navigation.value.openModal();
+        data.target = "CR";
       }
+        
+          parent.postMessage({ type: "onSuccess", data }, "*");
+
     }
   // }
 }
