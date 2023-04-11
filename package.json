@@ -1,0 +1,14 @@
+{
+  "name": "varun-duggi-extended-walls-copy",
+  "version": "1.0.0",
+  "description": "Scene exported with Spline",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^13.0.2"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5"
+  }
+}
