@@ -83,6 +83,10 @@ const light3 = new THREE.PointLight("#DCA567", 0, 2400, 8);
 light3.position.set(370.99512532258404, 881.6006777569545, -675);
 scene.add(light3);
 
+const light4 = new THREE.PointLight("#FFFFFF", 0, 1500, 8);
+light4.position.set(800, 420, 280);
+scene.add(light4);
+
 
 
 // const light4 = new THREE.PointLight("0xff0000", 4, 2500, 2);
@@ -303,6 +307,21 @@ t3.fromTo(
 );
 t3.to(light.position, { z: -815, duration: 1 });
 t3.to(light, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
+
+
+const t4 = gsap.timeline({
+  yoyo: false,
+  repeat: -1,
+});
+t4.fromTo(light4.position, { x: 950 }, { x: 800, duration: 1 });
+t4.fromTo(
+  light4,
+  { intensity: 0 },
+  { intensity: 2.6, duration: 1, ease: "power1.in" },
+  0
+);
+t4.to(light4.position, { x: 950, duration: 1 });
+t4.to(light4, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
 
 function animate(time) {
   controls.update();
