@@ -108,7 +108,7 @@ document.body.appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 
-scene.background = new THREE.Color("#e698a8");
+scene.background = new THREE.Color("#0b1c29");
 renderer.setClearAlpha(0);
 
 // orbit controls
