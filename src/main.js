@@ -266,62 +266,62 @@ function onClick(event) {
   // }
 }
 const t1 = gsap.timeline({ yoyo: false, repeat: -1, repeatDelay: 0.8 });
-t1.fromTo(light3.position, { z: -675 }, { z: -525, duration: 1 });
+t1.fromTo(light3.position, { z: -675 }, { z: -525, duration: 0.6 });
 t1.fromTo(
   light3,
   { intensity: 0 },
-  { intensity: 3.5, duration: 1, ease: "power1.in" },
+  { intensity: 3.5, duration: 0.6, ease: "power1.in" },
   0
 );
-t1.to(light3.position, { z: -675, duration: 1 });
-t1.to(light3, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
+t1.to(light3.position, { z: -675, duration: 0.6 });
+t1.to(light3, { intensity: 0, duration: 0.6, ease: "power1.out" }, 0.6);
 
 const t2 = gsap.timeline({
   yoyo: false,
   repeat: -1,
-  delay: 0.8,
+  delay: 0.6,
   repeatDelay: 0.8,
 });
-t2.fromTo(light2.position, { z: -815 }, { z: -665, duration: 1 });
+t2.fromTo(light2.position, { z: -815 }, { z: -665, duration:0.6 });
 t2.fromTo(
   light2,
   { intensity: 0 },
-  { intensity: 3, duration: 1, ease: "power1.in" },
+  { intensity: 3, duration:0.6, ease: "power1.in" },
   0
 );
-t2.to(light2.position, { z: -815, duration: 1 });
-t2.to(light2, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
+t2.to(light2.position, { z: -815, duration:0.6 });
+t2.to(light2, { intensity: 0, duration:0.6, ease: "power1.out" }, 0.6);
 
 const t3 = gsap.timeline({
   yoyo: false,
   repeat: -1,
-  delay: 1.6,
+  delay: 1.2,
   repeatDelay: 0.8,
 });
-t3.fromTo(light.position, { z: -815 }, { z: -665, duration: 1 });
+t3.fromTo(light.position, { z: -815 }, { z: -665, duration:0.6 });
 t3.fromTo(
   light,
   { intensity: 0 },
-  { intensity: 4, duration: 1, ease: "power1.in" },
+  { intensity: 4.5, duration:0.6, ease: "power1.in" },
   0
 );
-t3.to(light.position, { z: -815, duration: 1 });
-t3.to(light, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
+t3.to(light.position, { z: -815, duration:0.6 });
+t3.to(light, { intensity: 0, duration:0.6, ease: "power1.out" }, 0.6);
 
 
 const t4 = gsap.timeline({
   yoyo: false,
   repeat: -1,
 });
-t4.fromTo(light4.position, { x: 950 }, { x: 800, duration: 0.7 });
+t4.fromTo(light4.position, { x: 950 }, { x: 800, duration: 0.5 });
 t4.fromTo(
   light4,
   { intensity: 0 },
-  { intensity: 3, duration: 0.7, ease: "power1.in" },
+  { intensity: 3, duration: 0.5, ease: "power1.in" },
   0
 );
-t4.to(light4.position, { x: 950, duration: 0.7 });
-t4.to(light4, { intensity: 0, duration: 0.7, ease: "power1.out" }, 0.7);
+t4.to(light4.position, { x: 950, duration: 0.5 });
+t4.to(light4, { intensity: 0, duration: 0.5, ease: "power1.out" }, 0.5);
 
 function animate(time) {
   controls.update();
