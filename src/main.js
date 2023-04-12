@@ -270,7 +270,7 @@ t1.fromTo(light3.position, { z: -675 }, { z: -525, duration: 1 });
 t1.fromTo(
   light3,
   { intensity: 0 },
-  { intensity: 2.2, duration: 1, ease: "power1.in" },
+  { intensity: 2.9, duration: 1, ease: "power1.in" },
   0
 );
 t1.to(light3.position, { z: -675, duration: 1 });
@@ -286,7 +286,7 @@ t2.fromTo(light2.position, { z: -815 }, { z: -665, duration: 1 });
 t2.fromTo(
   light2,
   { intensity: 0 },
-  { intensity: 1.9, duration: 1, ease: "power1.in" },
+  { intensity: 2.5, duration: 1, ease: "power1.in" },
   0
 );
 t2.to(light2.position, { z: -815, duration: 1 });
@@ -302,7 +302,7 @@ t3.fromTo(light.position, { z: -815 }, { z: -665, duration: 1 });
 t3.fromTo(
   light,
   { intensity: 0 },
-  { intensity: 2.6, duration: 1, ease: "power1.in" },
+  { intensity: 3.5, duration: 1, ease: "power1.in" },
   0
 );
 t3.to(light.position, { z: -815, duration: 1 });
@@ -313,15 +313,15 @@ const t4 = gsap.timeline({
   yoyo: false,
   repeat: -1,
 });
-t4.fromTo(light4.position, { x: 950 }, { x: 800, duration: 1 });
+t4.fromTo(light4.position, { x: 950 }, { x: 800, duration: 0.7 });
 t4.fromTo(
   light4,
   { intensity: 0 },
-  { intensity: 2.6, duration: 1, ease: "power1.in" },
+  { intensity: 2.6, duration: 0.7, ease: "power1.in" },
   0
 );
-t4.to(light4.position, { x: 950, duration: 1 });
-t4.to(light4, { intensity: 0, duration: 1, ease: "power1.out" }, 1);
+t4.to(light4.position, { x: 950, duration: 0.7 });
+t4.to(light4, { intensity: 0, duration: 0.7, ease: "power1.out" }, 0.7);
 
 function animate(time) {
   controls.update();
